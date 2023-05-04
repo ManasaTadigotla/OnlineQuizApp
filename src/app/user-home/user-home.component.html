@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    Questions
+                </div>
+                <div>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="table table-bordered">
+                        <table class="table" width=100%>                                      
+                        <tr class="bg-primary">
+                            <th>Date</th>
+                            <th>Subject</th>
+                           <!-- <th>Emailid</th> -->
+                            <th>No. of Questions</th>
+                            <th>Correct Answers</th>
+                            <th>Answered</th>
+                            
+                        </tr>
+                        <tr *ngFor="let q of qReports">
+                            <td>{{q.date}}</td>
+                            <td>{{q.subject}}</td>
+                          <!--  <td>{{q.emailid}}</td> -->
+                            <td>{{q.noOfQues}}</td>
+                            <td>{{q.ansQues}}</td>
+                            <td>{{q.correctAns}}</td>
+                           </tr>
+                    </table>
+                    </div>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>

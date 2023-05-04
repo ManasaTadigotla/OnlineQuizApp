@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="card-body">
+        
+            <label>Subject</label>
+        <select class="form-Control" id="subDropdown" [(ngModel)]="subSelected">
+            <option value="-1">Select Subject</option>
+            <option *ngFor="let s of subjects" [value]="s" >{{s}}</option>
+        </select>
+        <input type="button" value="Start Quiz" (click)="onSubjectChange($event)">
+       
+        
+    </div>
+</div>
+
+
+<div class="container-fluid" *ngIf="isTestPageVisible">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+
+            </div>
+            <div class="card-body">
+                
+                <form #formQuiz="ngForm" class="formGroup">
+                    
+                    <div class="form-Control">
+                        <span >{{questionBySubject[currentQuestion].id}} &nbsp {{questionBySubject[currentQuestion].desc}}</span><br>
+                        
+                        <input type="radio" [(ngModel)]="answerFirst"  (click)="changeOptioon(questionBySubject[currentQuestion].firstoption)"  name="optionsRadio" [ngClass]="isSelected?'radio radio-info':''"><span>{{questionBySubject[currentQuestion].firstoption}}</span>
+                        <input type="radio" [(ngModel)]="answerSecond"  (click)="changeOptioon(questionBySubject[currentQuestion].secondoption)" name="optionsRadio" ><span>{{questionBySubject[currentQuestion].secondoption}}</span>
+                        <input type="radio"  [(ngModel)]="answerThird"  (click)="changeOptioon(questionBySubject[currentQuestion].thirdoption)"  name="optionsRadio" ><span>{{questionBySubject[currentQuestion].thirdoption}}</span>
+                        <br>
+                        
+                        <input type="button" value="prev" [disabled]="currentQuestion==0" (click)="prevQuestion(questionBySubject[currentQuestion])" class="btn btn-info">
+                        &nbsp;
+                        <input type="button" value="Next"  [disabled]="currentQuestion==questionBySubject.length-1" (click)="nextQuestion(questionBySubject[currentQuestion],$event)" class="btn btn-info">
+                       
+                        </div>
+<!--------------------------------------------------------------------------------->
+                        <div>
+
+                        </div>
+                       
+                       <!--
+                    
+                    <div class="form-Control" *ngFor="let q of questionBySubject | paginate:{itemsPerPage:1,currentPage:p}">
+                    <span >{{q.id}} &nbsp {{q.desc}}</span><br>
+                    <input type="radio" name="optionsRadio" ><span>{{q.firstoption}}</span>
+                    <input type="radio" name="optionsRadio" ><span>{{q.secondoption}}</span>
+                    <input type="radio" name="optionsRadio" ><span>{{q.thirdoption}}</span>
+                    <input type="button" value="Next" (click)="nextQuestion()" class="btn btn-info">
+                   
+                    </div>
+                    -->
+                   
+                   
+                                        <input type="submit" value="submit" class="btn btn-success">
+                </form>
+                
+            </div>
+            <div class="card-footer">
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    </div>
+
+</div>

@@ -1,0 +1,46 @@
+.optionDiv .card{
+    padding:15px;
+    margin-top:5px;
+}
+.option:hover{
+    background-color: rgb(205, 203, 203);
+}
+.pointer{
+    cursor: pointer;
+}
+.no-pointer{
+    cursor: none;
+}
+.icon-disable{
+    color:rgb(206,201,201);
+}
+.attempted {
+    background-color: rgb(44, 141, 44);
+}
+.left{
+    background-color: lightgray;
+}
+.questionDiv{
+    display:inline-block;
+}
+.no-pointer icon-disable
+{
+    background-color: aliceblue;
+}
+.icon-disable
+{
+    background-color: pink;
+}
+li
+{
+    list-style-type:none ;
+    cursor: pointer;
+    margin: 10px 0;
+}
+li.card:hover
+{
+    border: 1px solid blue;
+}
+ol{
+    padding: 0;
+}

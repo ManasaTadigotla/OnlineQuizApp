@@ -1,0 +1,153 @@
+{
+  "user": [
+    {
+      "email": "manasa@gmail.com",
+      "password": "manasa"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "admin"
+    },
+    {
+      "password": "anu",
+      "email": "anu@gmail.com"
+    },
+    {
+      "id": "ufunction getDate() { [native code] }",
+      "email": "sohan@gmail.com",
+      "password": "sohan"
+    },
+    {
+      "id": "u1683182274291",
+      "email": "adhya@gmail.com",
+      "password": "adhya"
+    },
+    {
+      "id": "u1683182407915",
+      "email": "murali@gmail.com",
+      "password": "murali"
+    }
+  ],
+  "quizreport": [
+    {
+      "id": "201",
+      "emailid": "manasa@gmail.com",
+      "subject": "angular",
+      "noofquestions": 25,
+      "date": "",
+      "answeeredquestions": 20,
+      "correctanswers": 18
+    },
+    {
+      "id": "201",
+      "emailid": "manasa@gmail.com",
+      "subject": "angular",
+      "noofquestions": 25,
+      "date": "",
+      "answeeredquestions": 20,
+      "correctanswers": 18
+    }
+  ],
+  "question": [
+    {
+      "id": "101",
+      "subject": "angular",
+      "desc": "hvj mjbk",
+      "options": [
+        {
+          "text": "void",
+          "correct": true
+        },
+        {
+          "text": "variable"
+        },
+        {
+          "text": "small"
+        }
+      ],
+      "firstoption": "ihiokih",
+      "secondoption": "kjgk",
+      "thirdoption": "hjfhjb",
+      "correctanswer": "firstoption",
+      "isAttempted": false,
+      "optionSelected": ""
+    },
+    {
+      "id": "102",
+      "subject": "angular",
+      "desc": "left is ",
+      "options": [
+        {
+          "text": "left",
+          "correct": true
+        },
+        {
+          "text": "right"
+        },
+        {
+          "text": "none"
+        }
+      ],
+      "firstoption": "javascript",
+      "secondoption": "node",
+      "thirdoption": "typescript",
+      "correctanswer": "thirdoption",
+      "isAttempted": false,
+      "optionSelected": ""
+    },
+    {
+      "subject": "angular",
+      "id": "108",
+      "desc": "klhg",
+      "firstoption": "jhjoljk",
+      "secondoption": "ojiom",
+      "thirdoption": "jok",
+      "correctanswer": "firstoption",
+      "isAttempted": false,
+      "optionSelected": ""
+    },
+    {
+      "subject": "html",
+      "id": "109",
+      "desc": "kjgihjk",
+      "firstoption": "fghjk",
+      "secondoption": "jklk",
+      "thirdoption": "oij",
+      "correctanswer": "thirdoption",
+      "isAttempted": false,
+      "optionSelected": ""
+    },
+    {
+      "subject": "angular",
+      "id": "103",
+      "desc": "json supports multi dimensional array",
+      "options": [
+        "default",
+        "sample"
+      ],
+      "firstoption": "true",
+      "secondoption": "false",
+      "thirdoption": "none",
+      "correctanswer": "",
+      "isAttempted": false,
+      "optionSelected": ""
+    },
+    {
+      "subject": "angular",
+      "id": "107",
+      "desc": "java is programing language used to build applications like",
+      "options": [
+        [
+          "",
+          ""
+        ]
+      ],
+      "firstoption": "fghjk",
+      "secondoption": "backesnd language",
+      "thirdoption": "database language",
+      "correctanswer": "",
+      "isAttempted": false,
+      "optionSelected": ""
+    }
+  ]
+}

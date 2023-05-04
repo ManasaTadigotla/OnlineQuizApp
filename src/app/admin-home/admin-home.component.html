@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    Questions
+                </div>
+                <div>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="table table-bordered">
+                        <table class="table" width=100%>
+                                                   
+                      <tr class="bg-primary">
+                        <th>Subject</th>
+                            <th>id</th>
+                            <th>Description</th>
+                            <th>option 1</th>
+                            <th>option 2</th>
+                            <th>option 3</th>
+                            <th>CorrectChioce</th>
+                            <th>Operations</th>
+                        </tr>
+                        <tr *ngFor="let ques of viewQuesInfo">
+                            <td>{{ques.subject}}</td>
+                            <td>{{ques.id}}</td>
+                            <td>{{ques.desc}}</td>
+                            <td>{{ques.firstoption}}</td>
+                            <td>{{ques.secondoption}}</td>
+                            <td>{{ques.thirdoption}}</td>
+                            <td>{{ques.correctanswer}}</td>
+                            <td [width]="100"><a routerLink="#" class="btn btn-info" >Modify</a>
+                            &nbsp;&nbsp;||
+                            <input type="button" value="Delete" class="btn btn-danger" (click)="RemoveQuestion(ques.id)">
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+
+<div class="container-fluid">
+<br>
+    <div class="row p-3">
+        <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">Question Form</div>
+            <div class="card-body">
+                <form [formGroup]="addQues" (ngSubmit)="addNewQuestion()">
+                    <div class="form-Group">
+                        <label>Subject</label>
+                        <select class="form-control" formControlName="subject">
+                            <option value="-1">Select Subject</option>
+                            <option  *ngFor="let sub of subjects" value="{{sub}}">{{sub}}</option>
+                            
+                        </select>
+                    </div>
+                    <div class="form-Group">
+                        <label>Question Id</label>
+                        <input type="text" class="form-control" name="id" formControlName="id">
+                    </div>
+                    <div class="form-Group">
+                        <label>Description</label>
+                         <textarea class="form-control" formControlName="desc" name="desc"></textarea>
+                    </div>
+                    <div class="form-Group">
+                        <label>Option 1</label>
+                        <input class="form-control" formControlName="firstoption" name="firstoption">
+                    </div>
+                    <div class="form-Group">
+                        <label>Option 2</label>
+            <input class="form-control" formControlName="secondoption" name="secondoption">
+                    </div>
+                    <div class="form-Group">
+                        <label>Option 3</label>
+                        <input class="form-control" formControlName="thirdoption" name="thirdoption">
+                    </div>
+                    <div class="form-Group">
+                        <label>CorrectChioce</label>
+                        <select class="form-control" formControlName="correctanswer" name="correctanswer">
+                            <option>firstoption</option>             
+                            <option>secondoption</option>   
+                            <option>thirdoption</option>   
+                        </select>
+                    </div>
+                    <div class="form-Group">
+                        <input type="submit" class="btn btn-success" value="Add Question">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-1">
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>

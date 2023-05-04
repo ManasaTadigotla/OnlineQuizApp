@@ -1,0 +1,14 @@
+{
+    "quizreport": [
+        {
+            "id":"201",
+            "emailid":"manasa@gmail.com",
+            "subject":"Angular",        
+            "noofquestions":25,
+            "date":"",
+            "answeeredquestions":20,
+            "correctanswers":18
+    
+        }
+      ]
+}

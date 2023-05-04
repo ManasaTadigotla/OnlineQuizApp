@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    Quiz Report
+                </div>
+                <div>
+                    
+                </div>
+                <div class="card-body">
+                    <div class="table table-bordered">
+                    <table class="table">
+                        <tr class="bg-primary">
+                            <th>id</th>
+                            <th>Quiz Date</th>
+                            <th>User</th>
+                            <th>Subject</th>
+                            <th>Total Question</th>
+                            <th>Attempted Questions</th>
+                            <th>Correctly Answered</th>  
+                            
+                        </tr>
+                        <tr *ngFor="let quiz of quizReport" >
+                            <td>{{quiz.id}}</td>
+                            <td>{{quiz.date}}</td>
+                            <td>{{quiz.emailid}}</td>
+                            <td>{{quiz.subject}}</td>
+                            <td>{{quiz.noofquestions}}</td>
+                            <td>{{quiz.answeeredquestions}}</td>
+                            <td>{{quiz.correctanswers}}</td>                                              
+                        </tr>
+                    </table>
+                </div>
+                </div>
+                <div class="card-footer">
+                    <div [innerHTML]="msg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
