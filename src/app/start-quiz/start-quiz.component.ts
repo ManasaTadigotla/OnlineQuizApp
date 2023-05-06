@@ -43,6 +43,7 @@ export class StartQuizComponent implements OnInit {
     //this.getQuestions();
     //this.displayQuestionsBySubject(this.subSelected);
     this.isTestPageVisible=false;
+    this.isQuizCompleted=false;
     this.counter=50;
     this.startCounter();
   }
@@ -70,17 +71,27 @@ export class StartQuizComponent implements OnInit {
   }
   displayQuestionsBySubject(subject: any) {
     //alert(subject);
+    this.isTestPageVisible=false;
     this.quesServ.viewAllQuestions().subscribe((data:any)=>{ 
       this.questionArray= data.filter((res:any)=>res.subject==subject); 
       if(this.questionArray!=null && this.questionArray.length>0)
       { 
-       // alert(this.questionArray.length);        
+       // alert(this.questionArray.length);   
+       if(this.questionArray.length>0)
+       {     
            this.isTestPageVisible=true; 
+       }
+       else
+       {
+        alert("Sorry!No quiz available on this subject");
+        this.isTestPageVisible=false;
+       }
       }
       else
       {
         //this.isTestPageVisible=false;
         alert("OOPs..No quiz on this subject!!!")  
+        this.isTestPageVisible=false;
         return;
       }
      // this.questionBySubject=data;
@@ -115,10 +126,6 @@ export class StartQuizComponent implements OnInit {
       this.points -= 10;
       //this.nextQuestion();
     }
-  }
-  onSelect1(question:any,options:any)
-  {
-    alert("radio");
   }
     
   onSelect(question:any,options:any,option:any) {
@@ -174,6 +181,7 @@ export class StartQuizComponent implements OnInit {
   
   getResult()
   {
+    this.stopCounter();
     this.questionArray.forEach(ques=>{
       if(ques.isAttempted==true)
       {
@@ -190,22 +198,34 @@ export class StartQuizComponent implements OnInit {
     })
     this.isTestPageVisible=false;
     this.isQuizCompleted=true;
-    //alert(this.isQuizCompleted);
-    this.msg+=this.correctAnswer;
-    this.msg+=this.inCorrectAnswer;
-    this.msg+=this.isQuizCompleted;
-    
+   this.saveQuizReport(); 
 
   }
 
-  saveQuizReport()
+  generateId(prefix:any):any
+  {
+    let id=prefix;
+    
+    //var d= new Date().getDate().toString();
+    var t=new Date().getTime().toString();
+    //console.log(d);
+    console.log(t);
+    id=id+t;
+    return id;
+
+  }
+ saveQuizReport()
   {
     this.q.noofquestions=this.questionArray.length;
     this.q.correctanswers=this.noOfCorrectAns;
     this.q.answeeredquestions=this.noOfAttemptedQues;
-    this.q.date=this.datepipe.transform((new Date), 'dd/MM/yyyy h:mm:ss');
+    this.q.date= new Date();
     this.q.emailid=this.name;
     this.q.subject=this.subSelected;
+    this.q.id=this.generateId("q");
+    this.quesServ.addQuizReport(this.q).subscribe((data: any)=>{
+      console.log(data);
+    });
     
   }
   resetCounter() {

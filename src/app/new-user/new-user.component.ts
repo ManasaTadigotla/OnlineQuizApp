@@ -10,15 +10,16 @@ import { Router } from '@angular/router';
 })
 export class NewUserComponent {
 
+  email:string=""
   constructor(private loginServ:LoginService,
     private builder:FormBuilder,
     private router:Router
     ){}
 
   regForm=new FormGroup({    
-    id:this.builder.control(this.generateId("u"),[Validators.required]),
-    email :this.builder.control('',[Validators.required,Validators.email]),
-    password :this.builder.control('',[Validators.minLength(5),Validators.required])
+    id:new FormControl(this.generateId("u"),[Validators.required]),
+    email : new FormControl('',[Validators.required,Validators.email]),
+    password :new FormControl('',[Validators.minLength(5),Validators.required])
   })
 
   generateId(prefix:any):any

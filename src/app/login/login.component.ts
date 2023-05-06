@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
     {
       if(this.loginForm.value.email=="admin@gmail.com" && this.loginForm.value.password=="admin")
       {
-        alert(this.loginForm.value.email);
+        //alert(this.loginForm.value.email);
         sessionStorage.setItem("userdetails",this.loginForm.value.email);
         this.router.navigate(['/admin']);
       }
@@ -67,7 +67,9 @@ export class LoginComponent implements OnInit {
         });
         if(user)
         {
-        //alert("valid user");
+          alert(user.email)
+          console.log(user);
+        alert("valid user");
         sessionStorage.setItem("userdetails",user.email);
         this.router.navigate(['/user']);
         }

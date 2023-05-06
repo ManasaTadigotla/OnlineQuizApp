@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuestionService } from '../question.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Quiz } from '../quiz';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-home',
@@ -14,15 +15,25 @@ export class UserHomeComponent implements OnInit{
   quizInfo:any;
   constructor(
     private quesService:QuestionService,
-    private builder:FormBuilder
+    private builder:FormBuilder,private router:Router
 
   ){}
 
   ngOnInit(): void {
    // this.quizReportOfUser();
    let email=sessionStorage.getItem("userdetails");
+   alert(email);
+   if(email!==null)
+   {
    //alert(email);
    this.viewQuizReportByEmail(email);
+  }
+  else
+  {
+    alert("please login");
+    this.router.navigate(['/login']);
+  }
+
   }
   viewQuizReportByEmail(email:any)
   {  

@@ -68,9 +68,10 @@ viewQuizReportByEmail(email:any)
  
 }
 
-addQuizReport(report:any)
+addQuizReport(report:any):any
 {
-  this.http.post(this.apiUrlQuizReport,report);
+  //report.id=501;
+ return this.http.post(this.apiUrlQuizReport,report);
 }
 
 }

@@ -1,19 +1,22 @@
 {
   "user": [
     {
+      "id": "u1683182274252",
       "email": "manasa@gmail.com",
       "password": "manasa"
     },
     {
+      "id": "u1683182274290",
       "email": "admin@gmail.com",
       "password": "admin"
     },
     {
+      "id": "u1683182274289",
       "password": "anu",
       "email": "anu@gmail.com"
     },
     {
-      "id": "ufunction getDate() { [native code] }",
+      "id": "u1683182274292",
       "email": "sohan@gmail.com",
       "password": "sohan"
     },
@@ -30,7 +33,7 @@
   ],
   "quizreport": [
     {
-      "id": "201",
+      "id": "q1583182274292",
       "emailid": "manasa@gmail.com",
       "subject": "angular",
       "noofquestions": 25,
@@ -39,36 +42,79 @@
       "correctanswers": 18
     },
     {
-      "id": "201",
+      "id": "q1583182274262",
       "emailid": "manasa@gmail.com",
       "subject": "angular",
       "noofquestions": 25,
-      "date": "",
+      "date":  "2023-05-01T09:24:00.460Z",
       "answeeredquestions": 20,
       "correctanswers": 18
+    },
+    {
+      "id": "u1585188274292",
+      "emailid": "adhya@gmail.com",
+      "subject": "angular",
+      "noofquestions": 5,
+      "correctanswers": 0,
+      "answeeredquestions": 1,
+      "date": "2023-05-04T09:24:00.460Z",
+      "id": "q1683192240460"
+    },
+    {
+      "emailid": "manasa@gmail.com",
+      "subject": "html",
+      "noofquestions": 0,
+      "correctanswers": 0,
+      "answeeredquestions": 0,
+      "date": "2023-05-04T09:25:57.631Z",
+      "id": "q1683192357631"
+    },
+    {
+      "emailid": "adhya@gmail.com",
+      "subject": "html",
+      "noofquestions": 10,
+      "correctanswers": 8,
+      "answeeredquestions": 8,
+      "date": "2023-05-04T09:26:02.594Z",
+      "id": "q1683192362594"
+    },
+    {
+      "emailid": "adhya@gmail.com",
+      "subject": "angular",
+      "noofquestions": 5,
+      "correctanswers": 0,
+      "answeeredquestions": 1,
+      "date": "2023-05-04T09:26:48.983Z",
+      "id": "q1683192408983"
+    },
+    {
+      "emailid": "sohan@gmail.com",
+      "subject": "angular",
+      "noofquestions": 5,
+      "correctanswers": 2,
+      "answeeredquestions": 2,
+      "date": "2023-05-04T09:31:05.139Z",
+      "id": "q1683192665139"
     }
   ],
   "question": [
     {
       "id": "101",
       "subject": "angular",
-      "desc": "hvj mjbk",
+      "desc": "What does HTML stand for?",
       "options": [
         {
-          "text": "void",
+          "text": "A.Hyper Text Markup Language",
           "correct": true
         },
         {
-          "text": "variable"
+          "text": "Hotmail"
         },
         {
-          "text": "small"
+          "text": "none"
         }
       ],
-      "firstoption": "ihiokih",
-      "secondoption": "kjgk",
-      "thirdoption": "hjfhjb",
-      "correctanswer": "firstoption",
+      "correctanswer": "Hotmail",
       "isAttempted": false,
       "optionSelected": ""
     },
@@ -91,27 +137,52 @@
       "firstoption": "javascript",
       "secondoption": "node",
       "thirdoption": "typescript",
-      "correctanswer": "thirdoption",
+      "correctanswer": "left",
       "isAttempted": false,
       "optionSelected": ""
     },
     {
-      "subject": "angular",
+      "subject": "angular is -----language",
       "id": "108",
       "desc": "klhg",
-      "firstoption": "jhjoljk",
-      "secondoption": "ojiom",
-      "thirdoption": "jok",
-      "correctanswer": "firstoption",
+      "options": [
+        {
+          "text": "fornend prog",
+          "correct": true
+        },
+        {
+          "text": "database"
+        },
+        {
+          "text": "none"
+        }
+      ],
+      "firstoption": "fornend prog",
+      "secondoption": "database",
+      "thirdoption": "none",
+      "correctanswer": "fornend prog",
       "isAttempted": false,
       "optionSelected": ""
     },
     {
       "subject": "html",
       "id": "109",
-      "desc": "kjgihjk",
-      "firstoption": "fghjk",
-      "secondoption": "jklk",
+      "desc": " What is the difference between an opening tag and a closing tag?",
+      "options": [
+        {
+          "text": "Opening tag has a / in front",
+          "correct": true
+        },
+        {
+          "text": "right"
+        },
+        {
+          "text": "none"
+        }
+      ],      
+      
+      "firstoption": "2",
+      "secondoption": "1",
       "thirdoption": "oij",
       "correctanswer": "thirdoption",
       "isAttempted": false,
@@ -122,13 +193,18 @@
       "id": "103",
       "desc": "json supports multi dimensional array",
       "options": [
-        "default",
-        "sample"
+        {
+          "text":"true",
+          "correct":true
+        },
+        {
+          "text":"false"
+        }
       ],
       "firstoption": "true",
       "secondoption": "false",
       "thirdoption": "none",
-      "correctanswer": "",
+      "correctanswer": "true",
       "isAttempted": false,
       "optionSelected": ""
     },
@@ -138,8 +214,18 @@
       "desc": "java is programing language used to build applications like",
       "options": [
         [
-          "",
-          ""
+          {
+            "text": "micro services"            
+          },
+          {
+            "text":"webapplications"
+          },
+          {
+            "text":"All of the above",
+            "correct":true
+
+          }
+         
         ]
       ],
       "firstoption": "fghjk",
